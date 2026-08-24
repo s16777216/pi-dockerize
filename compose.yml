@@ -1,0 +1,21 @@
+services:
+  pi-agent:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pi-agent
+    restart: unless-stopped
+    ports:
+      - "8504:8504"
+    env_file:
+      - .env
+    volumes:
+      # 工作目錄：Pi Agent 操作與建立程式碼的目錄（掛載至宿主機 ./workspace）
+      - ./workspace:/workspace
+      # 持久化 Pi Agent 與 Pi-Web 設定檔
+      - pi-agent-data:/root/.pi-agent
+      - pi-web-config:/root/.config/pi-web
+
+volumes:
+  pi-agent-data:
+  pi-web-config:
