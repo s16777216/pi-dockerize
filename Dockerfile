@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     git \
     curl \
     ca-certificates \
+    vim \
     && rm -rf /var/lib/apt/lists/*
 
 # 全域安裝 pi-coding-agent 與 pi-web
