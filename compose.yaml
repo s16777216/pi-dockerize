@@ -15,6 +15,7 @@ services:
       # 持久化 Pi Agent 與 Pi-Web 設定檔
       - pi-agent-data:/root/.pi
       - pi-web-config:/root/.config/pi-web
+      # 掛載本機自訂的 Pi Extensions 與 PI WEB Plugins
 
 volumes:
   pi-agent-data:

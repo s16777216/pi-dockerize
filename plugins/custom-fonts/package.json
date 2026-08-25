@@ -1,0 +1,17 @@
+{
+  "name": "pi-web-custom-fonts",
+  "version": "1.0.0",
+  "description": "Custom Fonts (Sarasa Mono TC 更紗黑體) for pi-web",
+  "main": "index.js",
+  "type": "module",
+  "piWeb": {
+    "plugins": [
+      {
+        "id": "custom-fonts",
+        "name": "自訂字型 (Sarasa Mono TC 更紗黑體)",
+        "browserRoot": ".",
+        "module": "./index.js"
+      }
+    ]
+  }
+}
